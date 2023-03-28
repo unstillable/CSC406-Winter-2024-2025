@@ -1,5 +1,12 @@
 # Basic data types
 
+- [Primitives](#primitives)
+- [Example](#example)
+- [Escape Character](#escape-character)
+- [Man pages (**RTFM**)](#man-pages-rtfm)
+  - [Man pages (3)](#man-pages-3)
+
+## Primitives
 The four basic data types are int, float, double, and char.
 
 | Data Type      | Size (bits) | min       | max        |
@@ -19,6 +26,8 @@ The four basic data types are int, float, double, and char.
 An int is a 32 bit signed value having a range of about negative 2G to positive 2G (1G = 230). An unsigned int is a strictly positive 32 bit value ranging from 0 to 4G. C has floating point types float and double. It is common practice in C (as in Java) to just use the double type with its increased precision for floating point numbers to minimize accumulated rounding errors. The char type is an 8 bit signed quantity that stores the ascii code for a character. Thus a char is just an 8 bit int and has an unsigned version also. We will discuss data types some more later.
 
 
+## Example
+
 [data-types.c](./data-types.c)
 ```c
 
@@ -28,7 +37,8 @@ An int is a 32 bit signed value having a range of about negative 2G to positive 
     printf( "%.9f %.9e\n", e, d );
     printf( "%20.9f %20.9e\n", e, d );
 ```
-conversion instructions other than d are used. Here are the conversions we will use:
+
+Notice that conversion instructions other than d are used. Here are the conversions we will use:
 
 | Conversion Specification | Output                                    |
 | ------------------------ | ----------------------------------------- |
@@ -44,12 +54,18 @@ conversion instructions other than d are used. Here are the conversions we will 
 | `%X`                     | hexadecimal integer, using upper case     |
 | `%%`                     | Prints a % sign                           |
 
-A number right after the placeholder (%) specifies the width (i.e., the number of characters) that the value should occupy, with blank spaces used as fillers when necessary:
+A number right after the placeholder (%) specifies the width (i.e., the number of characters) that the value should occupy, with blank spaces used as fillers when necessary. This is known as a **variadic function**
+```c
 printf("%3d %5c\n",x,a);
 printf("%20.9f %20.9e\n",e,d);
+```
 For float and double values, a precision can be specified:
+```c
 printf("%.9f %.9e\n",e,d);
 printf("%20.9f %20.9e\n",e,d);
+```
+
+## Escape Character
 The following is a list of some common escape sequences: 
 
 | Escape Sequences | Meaning         |
@@ -139,4 +155,12 @@ SYNOPSIS
 ```
 
 In C, the char type is really an integer type. We use the conversion instructions to illustrate this:
+
 [ascii.c](./ascii.c)
+
+```c
+for ( int i = 0; i < 128; i++ )
+{
+    printf( "%c:  %d\n", i, i );
+}
+```
