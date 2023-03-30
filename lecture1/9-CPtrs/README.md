@@ -1,4 +1,8 @@
 # C pointers
+- [Things in memory](#things-in-memory)
+- [Properties of variables](#properties-of-variables)
+- [Dereferencing pointer variables](#dereferencing-pointer-variables)
+
 
 
 We already saw that the `&` operator is used to obtain the **memory-address** of a variable:
@@ -48,3 +52,29 @@ student_type *ps;          /* ps can store the address of any student_type varia
 student_type one_student;
 ps = &one_student;	   /* ps has the address where one_student is stored in memory */
 ```
+
+## Dereferencing pointer variables
+
+Let's go back to our int example:
+```c
+int *pi;  /* variable of type pointer to int  */
+int i;    /* plain old int var */
+pi = &i;  /* pi now contains address of var i */
+```
+
+We can use pointer variable pi to manipulate the contents of the int variable i. To do so we must dereference pi as follows:
+```c
+*pi = 15; /* i now contains 15. */
+printf(" value pointed to by pi is: %d\n" *pi ); /* deref's pi and prints 15 */
+```
+
+The expression `*pi` can be thought of as "the value at the address stored in pi."
+
+Using pi with the * in front of it is called **dereferencing** the pointer variable.
+
+In summary, when pi is defined as:
+```c
+int *pi;
+```
+1. pi is a pointer (to an integer value)
+1. *pi is an integer
