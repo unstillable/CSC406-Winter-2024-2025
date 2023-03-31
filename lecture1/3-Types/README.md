@@ -12,13 +12,13 @@ The four basic data types are int, float, double, and char.
 | Data Type      | Size (bits) | min       | max        |
 | -------------- | ----------- | --------- | ---------- |
 | char           | 8           | $-2^{7}$  | $2^{7}-1$  |
-| unsigned char  | 8           | $0$       | $2^{8}$    |
+| unsigned char  | 8           | $0$       | $2^{8}-1$    |
 | short          | 16          | $-2^{15}$ | $2^{15}-1$ |
-| unsigned short | 16          | $0$       | $2^{16}$   |
+| unsigned short | 16          | $0$       | $2^{16}-1$   |
 | int            | 32          | $-2^{31}$ | $2^{31}-1$ |
-| unsigned int   | 32          | $0$       | $2^{32}$   |
+| unsigned int   | 32          | $0$       | $2^{32}-1$   |
 | long           | 64          | $-2^{63}$ | $2^{63-1}$ |
-| unsigned long  | 64          | $0$       | $2^{64}$   |
+| unsigned long  | 64          | $0$       | $2^{64}-1$   |
 | float          | 32          |           |            |
 | double         | 64          |           |            |
 
