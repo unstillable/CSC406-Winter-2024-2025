@@ -17,7 +17,7 @@ The four basic data types are int, float, double, and char.
 | unsigned short | 16          | $0$       | $2^{16}-1$   |
 | int            | 32          | $-2^{31}$ | $2^{31}-1$ |
 | unsigned int   | 32          | $0$       | $2^{32}-1$   |
-| long           | 64          | $-2^{63}$ | $2^{63-1}$ |
+| long           | 64          | $-2^{63}$ | $2^{63}-1$ |
 | unsigned long  | 64          | $0$       | $2^{64}-1$   |
 | float          | 32          |           |            |
 | double         | 64          |           |            |
