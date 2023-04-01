@@ -1,0 +1,16 @@
+---
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: 'true'
+AlignConsecutiveDeclarations: 'true'
+AlignEscapedNewlines: Left
+AlignTrailingComments: 'true'
+AllowAllConstructorInitializersOnNextLine: 'false'
+AllowShortIfStatementsOnASingleLine: WithoutElse
+AllowShortLoopsOnASingleLine: 'false'
+BreakBeforeBraces: Allman
+BreakConstructorInitializers: BeforeComma
+IndentWrappedFunctionNames: 'true'
+SpaceBeforeAssignmentOperators: 'true'
+SpacesInParentheses: 'true'
+
+...
