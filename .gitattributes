@@ -1,0 +1,2 @@
+lecture1/Lecture1a.pptx filter=lfs diff=lfs merge=lfs -text
+lecture2/Lecture2.pptx filter=lfs diff=lfs merge=lfs -text
