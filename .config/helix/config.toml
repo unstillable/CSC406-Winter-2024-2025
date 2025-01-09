@@ -1,0 +1,50 @@
+# Read the docs! https://docs.helix-editor.com
+# New to TOML? https://toml.io/en/
+theme = "onedarker"
+
+[editor]
+# More options https://docs.helix-editor.com/editor.html
+line-number = "relative"
+true-color = true
+bufferline = "multiple"
+auto-save = true
+completion-replace = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.lsp]
+auto-signature-help = false
+
+[editor.inline-diagnostics]
+cursor-line = "disable" # suggested setting: "hint"
+other-lines = "disable" # suggested setting: "warning"
+
+[editor.whitespace.render]
+tab = "all"
+
+[editor.whitespace.characters]
+tab = "→"
+
+[editor.indent-guides]
+render = true
+character = "┊"
+skip-levels = 1
+
+[keys.normal]
+# https://docs.helix-editor.com/remapping.html
+C-s = ":write" # Ctrl and 's' to write
+Cmd-s = ":write" # Cmd or Win or Meta and 's' to write
+
+[space]
+t = { h = ":toggle lsp.display-inlay-hints", s = ":toggle lsp.auto-signature-help", f = "file_picker_in_current_buffer_directory" }
+
+["+"]
+m = ":run-shell-command make"
+c = ":run-shell-command cargo build"
+t = ":run-shell-command cargo test"
