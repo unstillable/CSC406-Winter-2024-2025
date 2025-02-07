@@ -1,4 +1,4 @@
-# csc373-fall-2024-2025
+# csc406-winter-2024-2025
 
 These are some course notes for CSC373 
 
